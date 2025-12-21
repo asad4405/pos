@@ -1,6 +1,6 @@
 <div class="left-side-bar">
     <div class="brand-logo">
-        <a href="index.html">
+        <a href="{{ route('dashboard') }}">
             <img src="{{ asset('public/assets/vendors') }}/images/deskapp-logo.svg" alt="" class="dark-logo" />
             <img src="{{ asset('public/assets/vendors') }}/images/deskapp-logo-white.svg" alt="" class="light-logo" />
         </a>
@@ -12,38 +12,19 @@
         <div class="sidebar-menu">
             <ul id="accordion-menu">
                 <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
+                    <a href="{{ route('dashboard') }}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-house"></span><span class="mtext">Home</span>
                     </a>
-                    <ul class="submenu">
-                        <li><a href="index.html">Dashboard style 1</a></li>
-                        <li><a href="index2.html">Dashboard style 2</a></li>
-                        <li><a href="index3.html">Dashboard style 3</a></li>
-                    </ul>
                 </li>
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon bi bi-textarea-resize"></span><span class="mtext">Forms</span>
+                        <span class="micon bi bi-textarea-resize"></span><span class="mtext">Products</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="form-basic.html">Form Basic</a></li>
-                        <li>
-                            <a href="advanced-components.html">Advanced Components</a>
-                        </li>
-                        <li><a href="form-wizard.html">Form Wizard</a></li>
-                        <li><a href="html5-editor.html">HTML5 Editor</a></li>
-                        <li><a href="form-pickers.html">Form Pickers</a></li>
-                        <li><a href="image-cropper.html">Image Cropper</a></li>
-                        <li><a href="image-dropzone.html">Image Dropzone</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon bi bi-table"></span><span class="mtext">Tables</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="basic-table.html">Basic Tables</a></li>
-                        <li><a href="datatable.html">DataTables</a></li>
+                        <li><a href="{{ route('category.index') }}">Categories</a></li>
+                        <li><a href="#">Create Product</a></li>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Print Barcode</a></li>
                     </ul>
                 </li>
                 <li>
