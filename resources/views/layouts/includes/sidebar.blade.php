@@ -23,7 +23,7 @@
                     <ul class="submenu">
                         <li><a href="{{ route('category.index') }}">Categories</a></li>
                         <li><a href="{{ route('product.create') }}">Create Product</a></li>
-                        <li><a href="#">All Products</a></li>
+                        <li><a href="{{ route('product.index') }}">All Products</a></li>
                         <li><a href="#">Print Barcode</a></li>
                     </ul>
                 </li>

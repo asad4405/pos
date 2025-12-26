@@ -8,7 +8,7 @@
         <div class="pd-20 card-box mb-30">
             <div class="clearfix">
                 <div class="my-2 pull-left">
-                    <h4 class="text-blue h4">Counter Section</h4>
+                    <h4 class="text-blue h4">Category Section</h4>
                 </div>
                 <div class="pull-right">
                     <a href="{{ route('category.create') }}" class="btn btn-primary btn-sm scroll-click"><i

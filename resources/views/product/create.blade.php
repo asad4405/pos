@@ -85,20 +85,20 @@
                     </div>
 
                     <div class="col-lg-4 col-12">
-                        <label class="col-form-label"> Tax *</label>
-                        <input class="form-control" name="tax" type="number" value="{{ old('tax') }}" />
-                        @error('tax')
+                        <label class="col-form-label"> Tax Type *</label>
+                        <select name="tax_type" class="form-control">
+                            <option value="1">Percentage</option>
+                            <option value="2">Solid Amount</option>
+                        </select>
+                        @error('tax_type')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="col-lg-4 col-12">
-                        <label class="col-form-label"> Tax Type *</label>
-                        <select name="tax_type" class="form-control">
-                            <option value="1">Exclusive</option>
-                            <option value="2">Inclusive</option>
-                        </select>
-                        @error('tax_type')
+                        <label class="col-form-label"> Tax *</label>
+                        <input class="form-control" name="tax" type="number" value="{{ old('tax') }}" />
+                        @error('tax')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
