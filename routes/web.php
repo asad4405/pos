@@ -8,12 +8,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
+    Route::get('/', [HomeController::class, 'dashboard'])->name('dashboard');
 
     // category
     Route::resource('category', CategoryController::class)->names('category');
     // product
     Route::resource('product', ProductController::class)->names('product');
+    Route::get('/product-getdata', [ProductController::class, 'getData'])->name('product.get-data');
 });
 
 Route::middleware('auth')->group(function () {
@@ -22,4 +23,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

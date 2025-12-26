@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16"
         href="{{ asset('public/assets/vendors') }}/images/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -25,6 +26,7 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('public/assets/src') }}/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/vendors') }}/styles/style.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 </head>
 
 <body>
