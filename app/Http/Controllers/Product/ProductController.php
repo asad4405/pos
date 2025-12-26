@@ -43,11 +43,11 @@ class ProductController extends Controller
             ->addColumn('stock', fn($product) => $product->quantity)
 
             ->addColumn('status', function ($product) {
-                return '<label class="custom-toggle">
-                <input type="checkbox" ' . ($product->status == 1 ? 'checked' : '') . '
-                    data-id="' . $product->id . '">
-                <span class="toggle-slider"></span>
-            </label>';
+                if ($product->status == 1) {
+                    return '<span class="text-white badge bg-success">Active</span>';
+                } else {
+                    return '<span class="text-white badge bg-danger">Deactive</span>';
+                }
             })
 
             ->addColumn('action', function ($product) {
@@ -103,9 +103,9 @@ class ProductController extends Controller
         $product->quantity       = $request->quantity;
         $product->quantity_alert = $request->quantity_alert;
         $product->tax_type       = $request->tax_type;
-        if($request->tax_type == 1){
+        if ($request->tax_type == 1) {
             $product->tax        = $product->price * $product->tax / 100;
-        }elseif($request->tax_type == 2){
+        } elseif ($request->tax_type == 2) {
             $product->tax        = $request->tax;
         }
         $product->unit           = $request->unit;
